@@ -1,0 +1,32 @@
+from collections import deque
+queue=deque()
+
+def enque():
+    element=input('enter the element:')
+    queue.append(element)
+    print(queue)
+    
+def dequeue():
+    if not queue:
+        print('stack is empty')
+    else:
+        e=queue.popleft()
+        print('removed element:',e)
+        print(queue)
+        
+def show():
+    print(queue)
+    
+while True:
+    print('select the operation 1.push 2.pop 3.show 4.quit')
+    choice=int(input())
+    if choice==1:
+        enque()
+    elif choice==2:
+        dequeue()
+    elif choice==3:
+        show()
+    elif choice==4:
+        break
+    else:
+        print('enter the correct operation')
